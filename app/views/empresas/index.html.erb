@@ -1,0 +1,23 @@
+<%= render 'empresas/menu'%>
+<%= render 'layouts/final_menu' %> 
+
+<h1>Empresas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+  </tr>
+
+<% @empresas.each do |empresa| %>
+  <tr>
+    <td><%= empresa.nome %></td>
+    <td><%= link_to 'Show', empresa %></td>
+    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Destroy', empresa, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Empresa', new_empresa_path %>

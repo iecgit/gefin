@@ -1,0 +1,394 @@
+<%= render 'analise_financeiras/menu'%>
+<%= render 'layouts/final_menu' %> 
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Empresa:</b>
+  <%= @analise_financeira.empresa.nome %>
+</p>
+
+<p>
+  <b>Ano:</b>
+  <%= @analise_financeira.ano.ano %>
+</p>
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1>BALANÇO PATRIMONIAL</h1>
+</br>
+</br>
+<h1> Ativo Circulante Financeiro  </h1>
+
+
+<p>
+  <b>Caixa:</b>
+  <%= @analise_financeira.caixa %>
+</p>
+
+<p>
+  <b>Aplicacoes:</b>
+  <%= @analise_financeira.aplicacoes %>
+</p>
+<% @ativo_circulante_financeiros = @analise_financeira.ativo_circulante_financeiros %>
+<%= render 'ativo_circulante_financeiros/part_index' %> 
+
+<% @ativo_circulante_financeiro = AtivoCirculanteFinanceiro.new(analise_financeira: @analise_financeira) %>
+<%= render 'ativo_circulante_financeiros/form' %> 
+
+</br>
+</br>
+<h1> Ativo Circulante Operacional  </h1>
+
+<p>
+  <b>Estoque:</b>
+  <%= @analise_financeira.estoque %>
+</p>
+<% @ativo_circulante_operacionals = @analise_financeira.ativo_circulante_operacionals %>
+<%= render 'ativo_circulante_operacionals/part_index' %> 
+
+<% @ativo_circulante_operacional = AtivoCirculanteOperacional.new(analise_financeira: @analise_financeira) %>
+<%= render 'ativo_circulante_operacionals/form' %> 
+
+
+
+
+</br>
+</br>
+<h1> Ativo Permanente  </h1>
+
+<p>
+  <b>Ativo permanente:</b>
+  <%= @analise_financeira.ativo_permanente %>
+</p>
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> Passivo Circulante Financeiro </h1>
+
+<% @passivo_circulante_financeiros = @analise_financeira.passivo_circulante_financeiros %>
+<%= render 'passivo_circulante_financeiros/part_index' %> 
+
+<% @passivo_circulante_financeiro = PassivoCirculanteFinanceiro.new(analise_financeira: @analise_financeira) %>
+<%= render 'passivo_circulante_financeiros/form' %> 
+
+</br>
+</br>
+<h1> Passivo Circulante Operacional </h1>
+
+<p>
+  <b>Imposto renda contribuicao social:</b>
+  <%= @analise_financeira.imposto_renda_contribuicao_social %>
+</p>
+
+<% @passivo_circulante_operacionals = @analise_financeira.passivo_circulante_operacionals %>
+<%= render 'passivo_circulante_operacionals/part_index' %> 
+
+<% @passivo_circulante_operacional = PassivoCirculanteOperacional.new(analise_financeira: @analise_financeira) %>
+<%= render 'passivo_circulante_operacionals/form' %> 
+
+
+
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> ELP </h1>
+
+<p>
+  <b>Passivo exigivel longo prazo:</b>
+  <%= @analise_financeira.passivo_exigivel_longo_prazo %>
+</p>
+
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> PL </h1>
+
+<p>
+  <b>Patrimonio liquido:</b>
+  <%= @analise_financeira.patrimonio_liquido %>
+</p>
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> DRE</h1>
+
+<p>
+  <b>Lucro liquido:</b>
+  <%= @analise_financeira.lucro_liquido %>
+</p>
+
+<p>
+  <b>Lucro antes imposto renda:</b>
+  <%= @analise_financeira.lucro_antes_imposto_renda %>
+</p>
+
+<p>
+  <b>Despesas financeiras:</b>
+  <%= @analise_financeira.despesas_financeiras %>
+</p>
+
+<p>
+  <b>Lucro bruto:</b>
+  <%= @analise_financeira.lucro_bruto %>
+</p>
+
+<p>
+  <b>Lucro operacional:</b>
+  <%= @analise_financeira.lucro_operacional %>
+</p>
+
+<p>
+  <b>Vendas liquidas:</b>
+  <%= @analise_financeira.vendas_liquidas %>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> Análise de Capital Circulante (ou giro) </h1>
+
+<p>
+  <b>Ativo Circulante:</b>
+  <%= @analise_financeira.calcularAtivoCirculante %>
+</p>
+
+<p>
+  <b>Passivo Circulante:</b>
+  <%= @analise_financeira.calcularPassivoCirculante %>
+</p>
+
+<p>
+  <b>Capital Circulante Liquido:</b>
+  <%= @analise_financeira.calcularCapitalCirculanteLiquido %>
+</p>
+
+<p>
+  <b>Necessidade de Investimento em Capital de Giro (NIG):</b>
+  <%= @analise_financeira.calcularNecessidadeInvestimentoCapitalGiro %>
+</p>
+
+<p>
+  <b>Saldo Disponivel (SD):</b>
+  <%= @analise_financeira.calcularSaldoDisponivel %>
+</p>
+
+<p>
+  <b>Passivo exigivel longo prazo:</b>
+  <%= @analise_financeira.passivo_exigivel_longo_prazo %>
+</p>
+
+<p>
+  <b>Necesidade Total de Financiamento Permanente (NTFP):</b>
+  <%= @analise_financeira.calcularNecessidadeTotalFinanciamentoPermanente %>
+</p>
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> Análise de Financiamento </h1>
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Dados da Analise');
+        data.addRows([
+          ['Percentual ACF', <%= @analise_financeira.calcularPercentualACF %>],
+          ['Percentual ACO', <%= @analise_financeira.calcularPercentualACO %>],
+          ['Percentual AP' ,  <%= @analise_financeira.calcularPercentualAP %>],
+          ['Percentual PC', <%= @analise_financeira.calcularPercentualPC %>],
+          ['Percentual ELP',   <%= @analise_financeira.calcularPercentualELP %>],
+          ['Percentual PL',  <%= @analise_financeira.calcularPercentualPL %>]        
+	]);
+
+        var options = {
+          title: 'Análise de Financiamento'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</br>
+</br>
+<h1> Análise de Desempenho </h1>
+
+
+
+
+</br>
+</br>
+<h1> Indicadores de Liquidez </h1>
+
+<p>
+  <b>Indice de Liquidez Imediata:</b>
+  <%= @analise_financeira.calcularIndiceLiquidezImediata %>
+</p>
+
+<p>
+  <b>Indice de Liquidez Seca:</b>
+  <%= @analise_financeira.calcularIndiceLiquidezSeca %>
+</p>
+
+<p>
+  <b>Indice de Liquidez Corrente:</b>
+  <%= @analise_financeira.calcularIndiceLiquidezCorrente %>
+</p>
+
+
+
+
+
+
+</br>
+</br>
+<h1> Indicadores de Endividamento </h1>
+
+<p>
+  <b>Passivo (Passivo Total):</b>
+  <%= @analise_financeira.calcularPassivoTotal %>
+</p>
+
+<p>
+  <b>Indice Endividamento Geral (IEG):</b>
+  <%= @analise_financeira.calcularIndiceEndividamentoGeral %>
+</p>
+
+<p>
+  <b>Lucro Antes do Juros e Imposto de Renda (LAJIR):</b>
+  <%= @analise_financeira.calcularLucroAntesJurosImpostoRenda %>
+</p>
+
+<p>
+  <b>Indice de Corbertura de Juros:</b>
+  <%= @analise_financeira.calcularIndiceCorberturaJuros %>
+</p>
+
+<p>
+  <b>Indice de Corbertura de Endividamento Geral:</b>
+  <%= @analise_financeira.calcularIndiceEndividamentoGeral %>
+</p>
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> Indicadores de Rentabilidade </h1>
+
+<p>
+  <b>Ativo (Ativo Total):</b>
+  <%= @analise_financeira.calcularAtivoTotal %>
+</p>
+
+<p>
+  <b>Retorno Sobre o Ativo Total (Return on Assets) em %:</b>
+  <%= @analise_financeira.calcularRetornoSobreAtivoTotal %>
+</p>
+
+<p>
+  <b>Retorno Sobre o Capital Proprio (ROE) em %:</b>
+  <%= @analise_financeira.calcularRetornoSobreCapitalProprio %>
+</p>
+
+<p>
+  <b>Margem de Lucro Bruto:</b>
+  <%= @analise_financeira.calcularMargemLucroBruto %>
+</p>
+
+<p>
+  <b>Margem de Lucro Liquido:</b>
+  <%= @analise_financeira.calcularMargemLucroLiquido %>
+</p>
+
+<p>
+  <b>Margem de Lucro Operacional:</b>
+  <%= @analise_financeira.calcularMargemLucroOperacional %>
+</p>
+</br>
+</br>
+</br>
+<%= link_to 'Edit', edit_analise_financeira_path(@analise_financeira) %> |
+<%= link_to 'Back', analise_financeiras_path %>

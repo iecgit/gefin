@@ -1,0 +1,2 @@
+module PassivoCirculanteFinanceirosHelper
+end

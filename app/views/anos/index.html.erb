@@ -1,0 +1,26 @@
+<%= render 'anos/menu'%>
+<%= render 'layouts/final_menu' %> 
+
+<h1>Anos</h1>
+
+<table>
+  <tr>
+    <th>Ano</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @anos.each do |ano| %>
+  <tr>
+    <td><%= ano.ano %></td>
+    <td><%= link_to 'Show', ano %></td>
+    <td><%= link_to 'Edit', edit_ano_path(ano) %></td>
+    <td><%= link_to 'Destroy', ano, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

@@ -1,0 +1,18 @@
+<%= render 'anos/menu'%>
+<%= render 'layouts/final_menu' %> 
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ano:</b>
+  <%= @ano.ano %>
+</p>
+
+
+<%= link_to 'Edit', edit_ano_path(@ano) %> |
+<%= link_to 'Back', anos_path %>
+
+<br/>
+<br/>
+<% @analise_financeiras = @ano.analise_financeiras %>
+<%= render 'analise_financeiras/part_index'%>

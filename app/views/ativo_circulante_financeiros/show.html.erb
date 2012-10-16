@@ -1,0 +1,24 @@
+<%= render 'ativo_circulante_financeiros/menu'%>
+<%= render 'layouts/final_menu' %> 
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @ativo_circulante_financeiro.descricao %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @ativo_circulante_financeiro.valor %>
+</p>
+
+<p>
+  <b>Analise financeira:</b>
+  <%= @ativo_circulante_financeiro.analise_financeira.empresa.nome %>
+  <%= @ativo_circulante_financeiro.analise_financeira.ano.ano %>
+</p>
+
+
+<%= link_to 'Edit', edit_ativo_circulante_financeiro_path(@ativo_circulante_financeiro) %> |
+<%= link_to 'Back', ativo_circulante_financeiros_path %>

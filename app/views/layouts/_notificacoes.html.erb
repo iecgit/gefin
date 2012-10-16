@@ -1,0 +1,23 @@
+<% if notice.class == Array %>
+<p id="notice">
+	<% notice.each do |notificacao| %>
+	<%= notificacao %> </br>
+	<% end %>
+</p>
+<% else %>
+<p id="notice">
+	<%= notice %>
+</p>
+<% end %>
+
+<% if alert.class == Array %>
+<p id="alert">
+	<% alert.each do |alerta| %>
+	<%= alerta %> </br>
+	<% end %>
+</p>
+<% else %>
+<p id="alert">
+	<%= alert %>
+</p>
+<% end %> 

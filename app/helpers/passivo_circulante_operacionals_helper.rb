@@ -1,0 +1,2 @@
+module PassivoCirculanteOperacionalsHelper
+end

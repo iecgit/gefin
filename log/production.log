@@ -1,0 +1,89 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-03-24 09:04:36 -0300
+  Processing by StaticController#index as HTML
+Rendered static/_menu.html.erb (0.7ms)
+Rendered layouts/_final_menu.html.erb (0.6ms)
+Rendered static/index.html.erb within layouts/application (49.0ms)
+Compiled application.css  (138ms)  (pid 2954)
+Compiled scaffolds.css  (2ms)  (pid 2954)
+Compiled application.js  (64ms)  (pid 2954)
+Compiled jquery.js  (18ms)  (pid 2954)
+Compiled jquery_ujs.js  (1ms)  (pid 2954)
+Rendered layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 3263ms (Views: 3262.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-ae30e133eabbb10d9464189d3fb71e25.js" for 127.0.0.1 at 2012-03-24 09:04:39 -0300
+Served asset /application-ae30e133eabbb10d9464189d3fb71e25.js - 200 OK (1ms)
+
+
+Started GET "/assets/bgHeader3.png" for 127.0.0.1 at 2012-03-24 09:04:40 -0300
+Served asset /bgHeader3.png - 200 OK (4ms)
+
+
+Started GET "/assets/financas.jpg" for 127.0.0.1 at 2012-03-24 09:04:40 -0300
+Served asset /financas.jpg - 200 OK (14ms)
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2012-03-24 09:04:40 -0300
+Served asset /bg.png - 200 OK (8ms)
+
+
+Started GET "/assets/bgFooter3.png" for 127.0.0.1 at 2012-03-24 09:04:40 -0300
+Served asset /bgFooter3.png - 200 OK (10ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-03-24 09:04:46 -0300
+  Processing by StaticController#index as HTML
+Rendered static/_menu.html.erb (0.1ms)
+Rendered layouts/_final_menu.html.erb (0.0ms)
+Rendered static/index.html.erb within layouts/application (0.8ms)
+Rendered layouts/_menu.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/empresas/" for 127.0.0.1 at 2012-03-24 09:04:47 -0300
+  Processing by EmpresasController#index as HTML
+Rendered empresas/_menu.html.erb (0.8ms)
+Rendered layouts/_final_menu.html.erb (0.0ms)
+Rendered empresas/index.html.erb within layouts/application (12.7ms)
+Rendered layouts/_menu.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/anos/" for 127.0.0.1 at 2012-03-24 09:04:50 -0300
+  Processing by AnosController#index as HTML
+Rendered anos/_menu.html.erb (1.4ms)
+Rendered layouts/_final_menu.html.erb (0.1ms)
+Rendered anos/index.html.erb within layouts/application (32.1ms)
+Rendered layouts/_menu.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/analise_financeiras/" for 127.0.0.1 at 2012-03-24 09:04:51 -0300
+  Processing by AnaliseFinanceirasController#index as HTML
+Rendered analise_financeiras/_menu.html.erb (1.4ms)
+Rendered layouts/_final_menu.html.erb (0.1ms)
+Rendered analise_financeiras/_part_index.html.erb (144.1ms)
+Rendered analise_financeiras/index.html.erb within layouts/application (160.7ms)
+Rendered layouts/_menu.html.erb (0.0ms)
+Completed 200 OK in 192ms (Views: 187.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/analise_financeiras/1" for 127.0.0.1 at 2012-03-24 09:04:57 -0300
+  Processing by AnaliseFinanceirasController#show as HTML
+  Parameters: {"id"=>"1"}
+Rendered analise_financeiras/_menu.html.erb (0.4ms)
+Rendered layouts/_final_menu.html.erb (0.0ms)
+Rendered ativo_circulante_financeiros/_part_index.html.erb (15.6ms)
+Rendered ativo_circulante_financeiros/_form.html.erb (8.2ms)
+Rendered ativo_circulante_operacionals/_part_index.html.erb (17.8ms)
+Rendered ativo_circulante_operacionals/_form.html.erb (6.9ms)
+Rendered passivo_circulante_financeiros/_part_index.html.erb (15.4ms)
+Rendered passivo_circulante_financeiros/_form.html.erb (11.7ms)
+Rendered passivo_circulante_operacionals/_part_index.html.erb (20.1ms)
+Rendered passivo_circulante_operacionals/_form.html.erb (14.7ms)
+Rendered analise_financeiras/show.html.erb within layouts/application (290.6ms)
+Rendered layouts/_menu.html.erb (0.0ms)
+Completed 200 OK in 296ms (Views: 290.0ms | ActiveRecord: 4.4ms)

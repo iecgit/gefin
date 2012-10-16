@@ -1,0 +1,84 @@
+class AnaliseFinanceirasController < ApplicationController
+
+  # GET /analise_financeiras
+  # GET /analise_financeiras.json
+  def index
+    @analise_financeiras = AnaliseFinanceira.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @analise_financeiras }
+    end
+  end
+
+  # GET /analise_financeiras/1
+  # GET /analise_financeiras/1.json
+  def show
+    @analise_financeira = AnaliseFinanceira.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @analise_financeira }
+    end
+  end
+
+  # GET /analise_financeiras/new
+  # GET /analise_financeiras/new.json
+  def new
+    @analise_financeira = AnaliseFinanceira.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @analise_financeira }
+    end
+  end
+
+  # GET /analise_financeiras/1/edit
+  def edit
+    @analise_financeira = AnaliseFinanceira.find(params[:id])
+  end
+
+  # POST /analise_financeiras
+  # POST /analise_financeiras.json
+  def create
+    @analise_financeira = AnaliseFinanceira.new(params[:analise_financeira])
+
+    respond_to do |format|
+      if @analise_financeira.save
+        format.html { redirect_to @analise_financeira, notice: 'Analise financeira was successfully created.' }
+        format.json { render json: @analise_financeira, status: :created, location: @analise_financeira }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @analise_financeira.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /analise_financeiras/1
+  # PUT /analise_financeiras/1.json
+  def update
+    @analise_financeira = AnaliseFinanceira.find(params[:id])
+
+    respond_to do |format|
+      if @analise_financeira.update_attributes(params[:analise_financeira])
+        format.html { redirect_to @analise_financeira, notice: 'Analise financeira was successfully updated.' }
+        format.json { head :ok }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @analise_financeira.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /analise_financeiras/1
+  # DELETE /analise_financeiras/1.json
+  def destroy
+    @analise_financeira = AnaliseFinanceira.find(params[:id])
+    @analise_financeira.destroy
+
+    respond_to do |format|
+      format.html { redirect_to analise_financeiras_url }
+      format.json { head :ok }
+    end
+  end
+end

@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th>Valor</th>
+    <th>Analise financeira</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @passivo_circulante_financeiros.each do |passivo_circulante_financeiro| %>
+  <tr>
+    <td><%= passivo_circulante_financeiro.descricao %></td>
+    <td><%= passivo_circulante_financeiro.valor %></td>
+    <td><%= passivo_circulante_financeiro.analise_financeira.empresa.nome %>
+    	<%= passivo_circulante_financeiro.analise_financeira.ano.ano %></td>
+    <td><%= link_to 'Show', passivo_circulante_financeiro %></td>
+    <td><%= link_to 'Edit', edit_passivo_circulante_financeiro_path(passivo_circulante_financeiro) %></td>
+    <td><%= link_to 'Destroy', passivo_circulante_financeiro, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,24 @@
+<%= render 'ativo_circulante_operacionals/menu'%>
+<%= render 'layouts/final_menu' %> 
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @ativo_circulante_operacional.descricao %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @ativo_circulante_operacional.valor %>
+</p>
+
+<p>
+  <b>Analise financeira:</b>
+  <%= @ativo_circulante_operacional.analise_financeira.empresa.nome %>
+  <%= @ativo_circulante_operacional.analise_financeira.ano.ano %>
+</p>
+
+
+<%= link_to 'Edit', edit_ativo_circulante_operacional_path(@ativo_circulante_operacional) %> |
+<%= link_to 'Back', ativo_circulante_operacionals_path %>

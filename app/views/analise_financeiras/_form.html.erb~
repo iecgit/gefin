@@ -1,0 +1,150 @@
+<%= form_for(@analise_financeira) do |f| %>
+  <% if @analise_financeira.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@analise_financeira.errors.count, "error") %> prohibited this analise_financeira from being saved:</h2>
+
+      <ul>
+      <% @analise_financeira.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :empresa %><br />
+    <%= f.collection_select(:empresa_id, Empresa.all, :id, :nome) %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br />
+    <%= f.collection_select(:ano_id, Ano.all, :id, :ano) %>
+  </div>
+
+
+
+
+</br>
+</br>
+<h1>BALANÇO PATRIMONIAL</h1>
+</br>
+</br>
+<h1> Ativo Circulante Financeiro  </h1>
+
+  <div class="field">
+    <%= f.label :caixa %><br />
+    <%= f.text_field :caixa, :value =>1 %>
+  </div>
+  <div class="field">
+    <%= f.label :aplicacoes %><br />
+    <%= f.text_field :aplicacoes, :value =>1 %>
+  </div>
+
+
+
+
+</br>
+</br>
+<h1> Ativo Circulante Operacional  </h1>
+  <div class="field">
+    <%= f.label :estoque %><br />
+    <%= f.text_field :estoque, :value =>1 %>
+  </div>
+
+
+
+
+
+</br>
+</br>
+<h1> Ativo Permanente  </h1>
+  <div class="field">
+    <%= f.label :ativo_permanente %><br />
+    <%= f.text_field :ativo_permanente, :value =>1 %>
+  </div>
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> Passivo Circulante Financeiro </h1>
+
+
+
+
+</br>
+</br>
+<h1> Passivo Circulante Operacional </h1>
+  <div class="field">
+    <%= f.label :imposto_renda_contribuicao_social %><br />
+    <%= f.text_field :imposto_renda_contribuicao_social, :value =>1 %>
+  </div>
+
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> ELP </h1>
+  <div class="field">
+    <%= f.label :passivo_exigivel_longo_prazo %><br />
+    <%= f.text_field :passivo_exigivel_longo_prazo, :value =>1 %>
+  </div>
+
+
+
+
+
+
+
+</br>
+</br>
+<h1> PL </h1>
+  <div class="field">
+    <%= f.label :patrimonio_liquido %><br />
+    <%= f.text_field :patrimonio_liquido, :value =>1 %>
+  </div>
+
+
+
+
+
+
+</br>
+</br>
+<h1> DRE</h1>
+  <div class="field">
+    <%= f.label :lucro_liquido %><br />
+    <%= f.text_field :lucro_liquido, :value =>1 %>
+  </div>
+  <div class="field">
+    <%= f.label :lucro_antes_imposto_renda %><br />
+    <%= f.text_field :lucro_antes_imposto_renda, :value =>1 %>
+  </div>
+  <div class="field">
+    <%= f.label :despesas_financeiras %><br />
+    <%= f.text_field :despesas_financeiras, :value =>1 %>
+  </div>
+  <div class="field">
+    <%= f.label :lucro_bruto %><br />
+    <%= f.text_field :lucro_bruto, :value =>1 %>
+  </div>
+  <div class="field">
+    <%= f.label :lucro_operacional %><br />
+    <%= f.text_field :lucro_operacional, :value =>1 %>
+  </div>
+  <div class="field">
+    <%= f.label :vendas_liquidas %><br />
+    <%= f.text_field :vendas_liquidas, :value =>1 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

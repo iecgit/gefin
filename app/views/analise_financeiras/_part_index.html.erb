@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Empresa</th>
+    <th>Ano</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @analise_financeiras.each do |analise_financeira| %>
+  <tr>
+    <td><%= analise_financeira.empresa.nome %></td>
+    <td><%= analise_financeira.ano.ano %></td>
+    <td><%= link_to 'Show', analise_financeira %></td>
+    <td><%= link_to 'Edit', edit_analise_financeira_path(analise_financeira) %></td>
+    <td><%= link_to 'Destroy', analise_financeira, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

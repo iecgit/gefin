@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="/financas.ico" />
+		<title>Gestão Financeira</title>
+		<%= stylesheet_link_tag    "application" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1>Gestão Financeira</h1>
+				<ul id="barralateral_esq">
+					<%= render 'layouts/menu' %>
+				</ul>
+				<ul id="nav">
+					<%= yield %>
+			</div>
+		</div>
+		<div id="clearfooter"></div>
+		<div id="footer">
+			<div id="aviso">
+				</br>
+				</br>Gestão Financeira.
+				</br>Copyright (C) 2012 - Faca na caveira, Turma de Informática e Cidadania 2009.
+				</br>
+				</br>Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo sob
+				os termos da Licença Pública Geral GNU, conforme publicada pela Free Software
+				Foundation; tanto a versão 2 da Licença como (a seu critério) qualquer versão
+				mais atual.
+				</br>
+				</br>Faca da caveira - iec.ufpr2009@gmail.com
+			</div>
+		</div>
+	</body>
+</html>
